@@ -3,11 +3,10 @@ import { GoHomeFill } from "react-icons/go";
 import { FiSearch } from "react-icons/fi";
 import { BiLibrary } from "react-icons/bi";
 import { FaSpotify } from "react-icons/fa";
-
+import Body from "../../views/mobile/Body";
 
 const NavBarBotton = () => {
-
-    const sizeIcons = '1.6rem'
+  const sizeIcons = "1.6rem";
 
   return (
     <main className="fixed bottom-0 w-full">
@@ -30,8 +29,11 @@ const NavBarBotton = () => {
             <p>Spotify</p>
           </TabsTrigger>
         </TabsList>
+
         <div className="fixed top-0">
-          <TabsContent value="inicio">Inicio</TabsContent>
+          <TabsContent value="inicio">
+            <Body />
+          </TabsContent>
           <TabsContent value="search">Search</TabsContent>
           <TabsContent value="library">Library</TabsContent>
           <TabsContent value="premium">Premium</TabsContent>

@@ -12,7 +12,9 @@ export default {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
-  		colors: {}
+  		colors: {
+        grayBold:'rgb(18,18,18)'
+      }
   	}
   },
   plugins: [import("tailwindcss-animate")],

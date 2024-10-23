@@ -4,13 +4,17 @@ import { FiSearch } from "react-icons/fi";
 import { BiLibrary } from "react-icons/bi";
 import { FaSpotify } from "react-icons/fa";
 import Body from "../../views/mobile/Body";
+import useTabsStore from "@/stores/useTabsStore";
 
 const NavBarBotton = () => {
+
+  const { activeTab, setActiveTab } = useTabsStore()
+
   const sizeIcons = "1.6rem";
 
   return (
     <main className="fixed bottom-0 w-full">
-      <Tabs defaultValue="inicio" className="w-full">
+      <Tabs value={activeTab} onValueChange={setActiveTab} defaultValue="inicio" className="w-full">
         <TabsList className="w-full h-16 bg-white flex justify-around px-5">
           <TabsTrigger className="flex flex-col" value="inicio">
             <GoHomeFill size={sizeIcons} />
@@ -30,7 +34,7 @@ const NavBarBotton = () => {
           </TabsTrigger>
         </TabsList>
 
-        <div className="fixed top-0">
+        <div className="fixed top-0 w-full items-center flex bg-grayBold py-2">
           <TabsContent value="inicio">
             <Body />
           </TabsContent>

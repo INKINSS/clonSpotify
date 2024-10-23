@@ -13,7 +13,10 @@ export default {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		colors: {
-        grayBold:'rgb(18,18,18)'
+        grayBold:'rgb(18,18,18)',
+        greenLight:'rgb(27,197,88)',
+        customWhite:'rgb(255,255,255)',
+        grayLight:'rgb(51,51,51)'
       }
   	}
   },

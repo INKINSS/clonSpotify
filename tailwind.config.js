@@ -16,9 +16,26 @@ export default {
         grayBold:'rgb(18,18,18)',
         greenLight:'rgb(27,197,88)',
         customWhite:'rgb(255,255,255)',
-        grayLight:'rgb(51,51,51)'
+        grayLight:'rgb(51,51,51)',
+        grayExtraLight: 'rgb(169,169,169)'
       }
   	}
   },
-  plugins: [import("tailwindcss-animate")],
+  plugins: [
+    import("tailwindcss-animate"),
+    function ({ addUtilities }) {
+      addUtilities({
+        // Personalización de la barra de scroll
+        '.no-scrollbar': {
+          /* Para navegadores WebKit (Chrome, Safari) */
+          '-webkit-overflow-scrolling': 'touch',
+          'scrollbar-width': 'none', /* Firefox */
+          '-ms-overflow-style': 'none', /* Internet Explorer 10+ */
+        },
+        '.no-scrollbar::-webkit-scrollbar': {
+          display: 'none', /* WebKit (Safari, Chrome) */
+        },
+      });
+    },
+  ],
 }

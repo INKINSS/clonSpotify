@@ -35,7 +35,7 @@ const NavBarBotton = () => {
         </TabsList>
 
         <div className="fixed top-0 w-full items-center flex bg-grayBold py-2">
-          <TabsContent value="inicio">
+          <TabsContent className='w-full' value="inicio">
             <Body />
           </TabsContent>
           <TabsContent value="search">Search</TabsContent>

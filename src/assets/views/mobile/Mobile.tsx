@@ -1,6 +1,3 @@
-
 export const Mobile = () => {
-  return (
-    <div>index</div>
-  )
-}
+  return <div>index</div>;
+};

@@ -3,5 +3,5 @@ interface Props {
 }
 
 export const LabeSection = ({ labelSection }: Props) => {
-  return <h2>{labelSection}</h2>;
+  return <h2 className="font-bold text-[1.7rem] leading-8">{labelSection}</h2>;
 };

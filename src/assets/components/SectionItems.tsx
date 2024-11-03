@@ -19,9 +19,9 @@ export const SectionItems = ({ labelSection, collection }: Props) => {
   return (
     <>
       <LabeSection labelSection={labelSection} />
-      <section className="flex space-x-4 overflow-x-auto my-4">
+      <section className="flex overflow-x-auto my-4">
         {collection.map((item) => (
-          <article className="flex flex-col min-w-[8rem]" key={item.id}>
+          <article className="flex flex-col p-[1rem] rounded-md min-w-[10rem] hover:bg-hoverGrayCard" key={item.id}>
             <FigureItem urlItem={item.urlItem} />
             <TitleItem titleItem={item.titleItem} />
             <DescriptionItem descriptionItem={item.descriptionItem} />

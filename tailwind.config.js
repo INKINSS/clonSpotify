@@ -13,7 +13,11 @@ export default {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
-  		colors: {}
+  		colors: {
+        "backgroundGray": 'rgb(18,18,18)',
+        "grayLight": 'rgb(162,162,162)',
+        "hoverGrayCard": 'rgb(31,31,31)',
+      }
   	}
   },
   plugins: [

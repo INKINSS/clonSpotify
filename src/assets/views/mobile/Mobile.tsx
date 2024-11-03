@@ -1,25 +1,21 @@
 import "@/../firebase";
-import { useEffect, useState } from "react";
-import { getDatabase, ref, onValue } from "firebase/database";
 import { SectionItems } from "@/assets/components/SectionItems";
+import useCollection from "@/assets/hooks/useCollection";
 
 export const Mobile = () => {
-  const [collection, setCollection] = useState([]);
 
-  useEffect(() => {
-    const db = getDatabase();
-    const refItems = ref(db, "episodes");
-    onValue(refItems, (snapshot) => {
-      const data = snapshot.val();
-      setCollection(data);
-    });
-  }, []);
+  const episodes = useCollection('episodes');
+  const artist = useCollection('artist');
 
   return (
-    <main>
+    <main className="mx-2">
       <SectionItems
         labelSection="Episodios que podrían gustarte"
-        collection={collection}
+        collection={episodes}
+      />
+      <SectionItems 
+      labelSection="Artistas destacados"
+      collection={artist}
       />
     </main>
   );

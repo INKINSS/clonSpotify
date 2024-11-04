@@ -17,11 +17,11 @@ interface Props {
 
 export const SectionItems = ({ labelSection, collection }: Props) => {
   return (
-    <section className="mx-3">
+    <section className="">
       <LabeSection labelSection={labelSection} />
-      <section className="flex overflow-x-auto my-4">
+      <section className="flex overflow-x-auto scrollbar-hide my-4">
         {collection.map((item) => (
-          <article className="flex flex-col p-[1rem] rounded-md min-w-[10rem] hover:bg-hoverGrayCard" key={item.id}>
+          <article className="flex flex-col p-[.5rem] rounded-md min-w-[11rem] hover:bg-hoverGrayCard" key={item.id}>
             <FigureItem urlItem={item.urlItem} />
             <TitleItem titleItem={item.titleItem} />
             <DescriptionItem descriptionItem={item.descriptionItem} />

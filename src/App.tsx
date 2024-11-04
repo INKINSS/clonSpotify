@@ -1,10 +1,10 @@
 import "./App.css";
-import { Mobile } from "./assets/views/mobile/Mobile";
+import { ViewContent } from "./assets/components/ViewContent";
 
 function App() {
   return(
     <>
-    <Mobile />
+    <ViewContent />
     </>
   );
 }

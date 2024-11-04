@@ -17,11 +17,25 @@ export default {
         "backgroundGray": 'rgb(18,18,18)',
         "grayLight": 'rgb(162,162,162)',
         "hoverGrayCard": 'rgb(31,31,31)',
+        "greenCustom": 'rgb(0,208,85)'
       }
   	}
   },
   plugins: [
     require("@tailwindcss/line-clamp"),
     require("tailwindcss-animate"),
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.scrollbar-hide': {
+          /* Firefox */
+          'scrollbar-width': 'none',
+          /* Safari and Chrome */
+          '&::-webkit-scrollbar': {
+            display: 'none',
+          },
+        },
+      };
+      addUtilities(newUtilities);
+    },
   ],
 }

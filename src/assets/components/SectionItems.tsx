@@ -17,7 +17,7 @@ interface Props {
 
 export const SectionItems = ({ labelSection, collection }: Props) => {
   return (
-    <>
+    <section className="mx-3">
       <LabeSection labelSection={labelSection} />
       <section className="flex overflow-x-auto my-4">
         {collection.map((item) => (
@@ -28,6 +28,6 @@ export const SectionItems = ({ labelSection, collection }: Props) => {
           </article>
         ))}
       </section>
-    </>
+    </section>
   );
 };
